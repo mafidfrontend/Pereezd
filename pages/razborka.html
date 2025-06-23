@@ -3,165 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/output.css" />
-    <link rel="stylesheet" href="./src/styles.css" />
+    <link rel="stylesheet" href="../src/styles.css" />
+    <link rel="stylesheet" href="../src/output.css" />
     <title>Квартирный переезд в Ташкенте</title>
   </head>
   <body>
-    <!-- Navbar -->
-    <nav
-      class="container mx-auto flex justify-between items-center px-4 sm:px-8 lg:px-[140px] bg-white"
-    >
-      <a href="./index.html">
-        <img
-          src="./images/icons/Logo.svg"
-          alt="Удобный переезд лого"
-          class="h-8 sm:h-10 w-auto"
-        />
-      </a>
-
-      <div class="hidden lg:flex gap-[74px] items-center">
-        <ul class="flex gap-[60px] items-center">
-          <li class="relative group z-21">
-            <a
-              class="font-medium cursor-pointer flex items-center gap-1 services-dropdown-trigger py-[30px]"
-              href="#"
-            >
-              Услуги
-              <svg
-                class="w-4 h-4 transition-transform group-hover:rotate-180 dropdown-arrow"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M19 9l-7 7-7-7"
-                ></path>
-              </svg>
-            </a>
-            <div
-              class="absolute top-[84px] left-[-10px] w-[302px] bg-white border border-gray-200 shadow-lg opacity-0 invisible services-dropdown-menu transition-all duration-200 z-50"
-            >
-              <div class="py-3 px-3">
-                <a
-                  href="./kvartirniy.html"
-                  class="block px-4 py-2 text-gray-800 text-[16px] font-medium hover:text-green-600"
-                >
-                  Квартирный переезд
-                </a>
-                <a
-                  href="./offisniy.html"
-                  class="block px-4 py-2 text-gray-800 text-[16px] font-medium hover:text-green-600"
-                >
-                  Офисный переезд
-                </a>
-                <a
-                  href="./gruzchik.html"
-                  class="block px-4 py-2 hover:text-green-600 text-[16px] font-medium"
-                >
-                  Услуги грузчиков
-                </a>
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-gray-800 text-[16px] font-medium hover:text-green-600"
-                >
-                  Грузоперевозки
-                </a>
-                <a
-                  href="./razborka.html"
-                  class="block px-4 py-2 text-gray-800 text-[16px] font-medium hover:text-green-600"
-                >
-                  Разборка-сборка мебели
-                </a>
-                <a
-                  href="./montaj.html"
-                  class="block px-4 py-2 text-gray-800 text-[16px] font-medium hover:text-green-600"
-                >
-                  Монтаж кондиционера
-                </a>
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-gray-800 text-[16px] font-medium hover:text-green-600"
-                >
-                  Уборка
-                </a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <a
-              class="font-medium hover:border-b-4 hover:border-[#52AE32] py-[31px]"
-              href="#"
-              >Партнеры</a
-            >
-          </li>
-          <li>
-            <a
-              class="font-medium hover:border-b-4 hover:border-[#52AE32] py-[31px]"
-              href="#"
-              >Галерея</a
-            >
-          </li>
-          <li>
-            <a
-              class="font-medium hover:border-b-4 hover:border-[#52AE32] py-[31px]"
-              href="#"
-              >О нас</a
-            >
-          </li>
-          <li>
-            <a
-              class="font-medium hover:border-b-4 hover:border-[#52AE32] py-[31px]"
-              href="#"
-              >Контакты</a
-            >
-          </li>
-        </ul>
-        <div class="flex gap-[30px] items-center">
-          <div class="flex flex-col">
-            <a href="tel:+998942803738" class="font-semibold text-[15px]"
-              >+998 94 280 37 38</a
-            >
-            <a href="tel:+998933999051" class="font-semibold text-[15px]"
-              >+998 93 399 90 51</a
-            >
-            <span class="font-normal text-[#7D7D7D] text-[12px]"
-              >c 8:00 до 21:00, ежедневно</span
-            >
-          </div>
-          <button
-            class="py-[15px] px-[39px] hover:border border transition-all duration-200"
-          >
-            Задать вопрос
-          </button>
-        </div>
-      </div>
-
-      <!-- Mobile menu button -->
-      <div class="lg:hidden">
-        <button
-          type="button"
-          class="mobile-menu-btn p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
-        >
-          <svg
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
-      </div>
-    </nav>
     <!-- Mobile menu -->
     <div
       class="mobile-menu fixed inset-y-0 left-0 z-50 w-full bg-white shadow-xl lg:hidden"
@@ -238,7 +84,7 @@
       <div class="max-w-[700px] mx-auto">
         <div class="mt-[60px] mb-5">
           <img
-            src="./images/photos/razborka.png"
+            src="../images/photos/razborka.png"
             alt="Квартирный переезд - коробки, мебель и растения готовые к переезду"
             class="w-full mx-auto"
           />
@@ -317,9 +163,9 @@
       </div>
     </main>
 
-    <script src="./src/footer.js"></script>
-
     <!-- JavaScript Link -->
-    <script src="./src/app.js"></script>
+    <script src="../src/app.js"></script>
+    <script src="../src/navbar.js"></script>
+    <script src="../src/footer.js"></script>
   </body>
 </html>

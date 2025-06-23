@@ -8,7 +8,7 @@ function createFooter() {
       <!-- Logo Section -->
       <div class="mb-8 lg:mb-0">
         <img
-          src="./images/icons/Logo.svg"
+          src="../images/icons/Logo.svg"
           alt="WebSite Logo"
           class="h-8 w-auto"
         />
@@ -59,7 +59,7 @@ function createFooter() {
             <li>
               <a target="_blank" href="https://instagram.com/eastline.pereezd">
                 <img
-                  src="./images/icons/instagram.svg"
+                  src="../images/icons/instagram.svg"
                   alt="Instagram Icon"
                   class="w-6 h-6"
                 />
@@ -68,7 +68,7 @@ function createFooter() {
             <li>
               <a target="_blank" href="https://t.me/eastlinepereezd">
                 <img
-                  src="./images/icons/telegram.svg"
+                  src="../images/icons/telegram.svg"
                   alt="Telegram Icon"
                   class="w-6 h-6"
                 />
@@ -77,7 +77,7 @@ function createFooter() {
             <li>
               <a target="_blank" href="https://fb.com/eastline.pereezd">
                 <img
-                  src="./images/icons/facebook.svg"
+                  src="../images/icons/facebook.svg"
                   alt="Facebook Icon"
                   class="w-6 h-6"
                 />
@@ -86,7 +86,7 @@ function createFooter() {
             <li>
               <a target="_blank" href="https://youtube.com/@EastlinePereezdUz">
                 <img
-                  src="./images/icons/youtubeFooter.svg"
+                  src="../images/icons/youtubeFooter.svg"
                   alt="YouTube Icon"
                   class="w-6 h-6"
                 />
@@ -105,7 +105,7 @@ function createFooter() {
           <div class="flex flex-col gap-5">
             <div class="flex gap-[10px]">
               <img
-                src="./images/icons/carbon_location.svg"
+                src="../images/icons/carbon_location.svg"
                 alt="Location Icon"
                 class="w-5 h-5 flex-shrink-0"
               />
@@ -115,7 +115,7 @@ function createFooter() {
             </div>
             <div class="flex gap-[10px]">
               <img
-                src="./images/icons/carbon_mail.svg"
+                src="../images/icons/carbon_mail.svg"
                 alt="Mail Icon"
                 class="w-5 h-5 flex-shrink-0"
               />
@@ -125,7 +125,7 @@ function createFooter() {
             </div>
             <div class="flex gap-[10px]">
               <img
-                src="./images/icons/carbon_phone.svg"
+                src="../images/icons/carbon_phone.svg"
                 alt="Phone Icon"
                 class="w-5 h-5 flex-shrink-0"
               />

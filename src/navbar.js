@@ -5,11 +5,13 @@ function createNavbar() {
 
   nav.innerHTML = `
     <div>
-      <img
-        src="./images/icons/Logo.svg"
-        alt="Удобный переезд лого"
-        class="h-8 sm:h-10 w-auto"
-      />
+      <a href="../index.html">
+        <img
+            src="../images/icons/Logo.svg"
+            alt="Удобный переезд лого"
+            class="h-8 sm:h-10 w-auto"
+        />
+      </a>
     </div>
 
     <div class="hidden lg:flex gap-[74px] items-center">
