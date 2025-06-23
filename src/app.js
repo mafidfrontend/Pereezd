@@ -432,20 +432,6 @@ card2.addEventListener("mouseleave", () => {
   updateImageOpacity();
 });
 
-document.querySelectorAll("button").forEach((button) => {
-  button.addEventListener("click", (e) => {
-    e.preventDefault();
-    alert("Услуга заказана! (This is a demo)");
-  });
-});
-
-document.querySelectorAll('a[href="#"]').forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-    alert("Показать подробности... (This is a demo)");
-  });
-});
-
 card1.addEventListener("mouseenter", function () {
   this.classList.add("shadow-lg", "scale-[1.02]");
 });
