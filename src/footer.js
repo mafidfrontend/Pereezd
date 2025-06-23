@@ -23,27 +23,27 @@ function createFooter() {
           </h3>
           <ul class="flex flex-col gap-5">
             <li>
-              <a class="text-[#C0C0C0] text-base sm:text-lg lg:text-[18px]" href="#">
+              <a class="text-[#C0C0C0] text-base sm:text-lg lg:text-[18px] hover:text-[#202020] transition-colors duration-300 ease-in-out" href="#">
                 Главная
               </a>
             </li>
             <li>
-              <a class="text-[#C0C0C0] text-base sm:text-lg lg:text-[18px]" href="#">
+              <a class="text-[#C0C0C0] text-base sm:text-lg lg:text-[18px] hover:text-[#202020] transition-colors duration-300 ease-in-out" href="#">
                 О нас
               </a>
             </li>
             <li>
-              <a class="text-[#C0C0C0] text-base sm:text-lg lg:text-[18px]" href="#">
+              <a class="text-[#C0C0C0] text-base sm:text-lg lg:text-[18px] hover:text-[#202020] transition-colors duration-300 ease-in-out" href="#">
                 Партнеры
               </a>
             </li>
             <li>
-              <a class="text-[#C0C0C0] text-base sm:text-lg lg:text-[18px]" href="#">
+              <a class="text-[#C0C0C0] text-base sm:text-lg lg:text-[18px] hover:text-[#202020] transition-colors duration-300 ease-in-out" href="#">
                 Галерея
               </a>
             </li>
             <li>
-              <a class="text-[#C0C0C0] text-base sm:text-lg lg:text-[18px]" href="#">
+              <a class="text-[#C0C0C0] text-base sm:text-lg lg:text-[18px] hover:text-[#202020] transition-colors duration-300 ease-in-out" href="#">
                 Услуги
               </a>
             </li>
@@ -57,38 +57,38 @@ function createFooter() {
           </h3>
           <ul class="flex gap-5">
             <li>
-              <a target="_blank" href="https://instagram.com/eastline.pereezd">
+              <a target="_blank" href="https://instagram.com/eastline.pereezd" class="block hover:scale-110 transition-transform duration-300 ease-in-out">
                 <img
                   src="../images/icons/instagram.svg"
                   alt="Instagram Icon"
-                  class="w-6 h-6"
+                  class="w-6 h-6 hover:opacity-80 transition-opacity duration-300"
                 />
               </a>
             </li>
             <li>
-              <a target="_blank" href="https://t.me/eastlinepereezd">
+              <a target="_blank" href="https://t.me/eastlinepereezd" class="block hover:scale-110 transition-transform duration-300 ease-in-out">
                 <img
                   src="../images/icons/telegram.svg"
                   alt="Telegram Icon"
-                  class="w-6 h-6"
+                  class="w-6 h-6 hover:opacity-80 transition-opacity duration-300"
                 />
               </a>
             </li>
             <li>
-              <a target="_blank" href="https://fb.com/eastline.pereezd">
+              <a target="_blank" href="https://fb.com/eastline.pereezd" class="block hover:scale-110 transition-transform duration-300 ease-in-out">
                 <img
                   src="../images/icons/facebook.svg"
                   alt="Facebook Icon"
-                  class="w-6 h-6"
+                  class="w-6 h-6 hover:opacity-80 transition-opacity duration-300"
                 />
               </a>
             </li>
             <li>
-              <a target="_blank" href="https://youtube.com/@EastlinePereezdUz">
+              <a target="_blank" href="https://youtube.com/@EastlinePereezdUz" class="block hover:scale-110 transition-transform duration-300 ease-in-out">
                 <img
                   src="../images/icons/youtubeFooter.svg"
                   alt="YouTube Icon"
-                  class="w-6 h-6"
+                  class="w-6 h-6 hover:opacity-80 transition-opacity duration-300"
                 />
               </a>
             </li>
@@ -129,18 +129,20 @@ function createFooter() {
                 alt="Phone Icon"
                 class="w-5 h-5 flex-shrink-0"
               />
-              <a
-                href="tel:+998942803738"
-                class="text-[#C0C0C0] text-base sm:text-lg lg:text-[18px]"
-              >
-                +998 94 280 37 38
-              </a>
-              <a
-                href="tel:+998933999051"
-                class="text-[#C0C0C0] text-base sm:text-lg lg:text-[18px]"
-              >
-                +998 93 399 90 51
-              </a>
+              <div class="flex flex-col gap-1">
+                <a
+                  href="tel:+998942803738"
+                  class="text-[#C0C0C0] text-base sm:text-lg lg:text-[18px] hover:text-[#202020] hover:underline transition-all duration-300 ease-in-out"
+                >
+                  +998 94 280 37 38
+                </a>
+                <a
+                  href="tel:+998933999051"
+                  class="text-[#C0C0C0] text-base sm:text-lg lg:text-[18px] hover:text-[#202020] hover:underline transition-all duration-300 ease-in-out"
+                >
+                  +998 93 399 90 51
+                </a>
+              </div>
             </div>
           </div>
         </div>

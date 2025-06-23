@@ -691,7 +691,8 @@
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-8 gap-6 lg:gap-[30px] pb-8 sm:pb-16 lg:pb-[120px]"
         >
           <div
-            class="bg-[#F3F3F3] col-span-1 sm:col-span-2 lg:col-span-2 rounded-lg p-[30px] flex flex-col relative h-[300px]"
+            id="card-1"
+            class="bg-[#F3F3F3] col-span-1 sm:col-span-2 lg:col-span-2 rounded-lg p-[30px] flex flex-col relative h-[300px] cursor-pointer transition-all duration-300"
           >
             <h3
               class="text-lg sm:text-xl lg:text-[20px] font-semibold text-[#202020] w-full sm:w-52 mb-4"
@@ -700,25 +701,28 @@
             </h3>
             <div class="flex-1 flex items-center justify-center">
               <img
+                id="image-1"
                 src="./images/photos/payment-photoroom.png"
                 alt="Квартирный переезд"
-                class="max-w-full h-auto object-contain absolute bottom-0 right-0"
+                class="max-w-full h-auto object-contain absolute bottom-0 right-0 hover-transition opacity-100"
               />
             </div>
           </div>
 
           <div
-            class="bg-[#F3F3F3] col-span-1 sm:col-span-2 lg:col-span-2 rounded-lg p-[30px] flex flex-col relative h-[300px]"
+            id="card-2"
+            class="bg-[#F3F3F3] col-span-1 sm:col-span-2 lg:col-span-2 rounded-lg p-[30px] flex flex-col relative h-[300px] cursor-pointer transition-all duration-300"
           >
             <div class="flex-1 flex items-center justify-center mb-4">
               <img
+                id="image-2"
                 src="./images/photos/payment-office.png"
                 alt="Офисный переезд"
-                class="max-w-full h-auto object-contain absolute top-0 left-0"
+                class="max-w-full h-auto object-contain absolute top-0 left-0 hover-transition opacity-100"
               />
             </div>
             <h3
-              class="text-lg sm:text-xl lg:text-[20px] text-right font-semibold text-[#202020] w-full sm:w-52 mb-[30] mr-0 sm:mr-[30px] ml-auto"
+              class="text-lg sm:text-xl lg:text-[20px] text-right font-semibold text-[#202020] w-full sm:w-52 mb-[30px] mr-0 sm:mr-[30px] ml-auto"
             >
               Офисный переезд в Ташкенте
             </h3>
@@ -1384,7 +1388,6 @@
       </section>
     </main>
 
-    
     <!-- JavaScript Link -->
     <script src="./src/app.js"></script>
     <script src="./src/footer.js"></script>

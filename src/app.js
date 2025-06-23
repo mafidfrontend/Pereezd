@@ -385,3 +385,79 @@ style.textContent = `
             }
         `;
 document.head.appendChild(style);
+
+const card1 = document.getElementById("card-1");
+const card2 = document.getElementById("card-2");
+const image1 = document.getElementById("image-1");
+const image2 = document.getElementById("image-2");
+
+let hoveredCard = null;
+
+function updateImageOpacity() {
+  if (hoveredCard === 1) {
+    image1.classList.remove("opacity-100");
+    image1.classList.add("opacity-50");
+    image2.classList.remove("opacity-50");
+    image2.classList.add("opacity-100");
+  } else if (hoveredCard === 2) {
+    image2.classList.remove("opacity-100");
+    image2.classList.add("opacity-50");
+    image1.classList.remove("opacity-50");
+    image1.classList.add("opacity-100");
+  } else {
+    image1.classList.remove("opacity-50");
+    image1.classList.add("opacity-100");
+    image2.classList.remove("opacity-50");
+    image2.classList.add("opacity-100");
+  }
+}
+
+card1.addEventListener("mouseenter", () => {
+  hoveredCard = 1;
+  updateImageOpacity();
+});
+
+card1.addEventListener("mouseleave", () => {
+  hoveredCard = null;
+  updateImageOpacity();
+});
+
+card2.addEventListener("mouseenter", () => {
+  hoveredCard = 2;
+  updateImageOpacity();
+});
+
+card2.addEventListener("mouseleave", () => {
+  hoveredCard = null;
+  updateImageOpacity();
+});
+
+document.querySelectorAll("button").forEach((button) => {
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+    alert("Услуга заказана! (This is a demo)");
+  });
+});
+
+document.querySelectorAll('a[href="#"]').forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    alert("Показать подробности... (This is a demo)");
+  });
+});
+
+card1.addEventListener("mouseenter", function () {
+  this.classList.add("shadow-lg", "scale-[1.02]");
+});
+
+card1.addEventListener("mouseleave", function () {
+  this.classList.remove("shadow-lg", "scale-[1.02]");
+});
+
+card2.addEventListener("mouseenter", function () {
+  this.classList.add("shadow-lg", "scale-[1.02]");
+});
+
+card2.addEventListener("mouseleave", function () {
+  this.classList.remove("shadow-lg", "scale-[1.02]");
+});
