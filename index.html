@@ -3,264 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- CSS Link -->
+    <!-- CSS Links -->
     <link rel="stylesheet" href="./src/output.css" />
-    <link rel="stylesheet" href="./src/slider.css" />
+    <link rel="stylesheet" href="./src/styles.css" />
     <!-- Web-Site Title -->
     <title>Переезд</title>
-    <!-- Styles -->
-    <style>
-      button {
-        background-color: #52ae32;
-        color: white;
-        transition: all 0.3s;
-        cursor: pointer;
-        border: 1px solid transparent;
-      }
-      button:hover {
-        background-color: transparent;
-        color: #52ae32;
-        border: 1px solid #52ae32;
-      }
-      h2 {
-        font-weight: 600;
-        font-size: 32px;
-        color: #202020;
-        text-align: center;
-        padding-top: 120px;
-        padding-bottom: 60px;
-      }
-
-      @media (max-width: 768px) {
-        h2 {
-          font-size: 24px;
-          padding-top: 60px;
-          padding-bottom: 30px;
-        }
-      }
-
-      .fade-in {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.6s ease-out;
-      }
-
-      .fade-in.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .slide-in-left {
-        opacity: 0;
-        transform: translateX(-50px);
-        transition: all 0.6s ease-out;
-      }
-
-      .slide-in-left.visible {
-        opacity: 1;
-        transform: translateX(0);
-      }
-
-      .slide-in-right {
-        opacity: 0;
-        transform: translateX(50px);
-        transition: all 0.6s ease-out;
-      }
-
-      .slide-in-right.visible {
-        opacity: 1;
-        transform: translateX(0);
-      }
-
-      .scale-in {
-        opacity: 0;
-        transform: scale(0.8);
-        transition: all 0.6s ease-out;
-      }
-
-      .scale-in.visible {
-        opacity: 1;
-        transform: scale(1);
-      }
-
-      .mobile-menu {
-        transform: translateX(-100%);
-        transition: transform 0.3s ease-in-out;
-      }
-
-      .mobile-menu.open {
-        transform: translateX(0);
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      .mobile-menu::-webkit-scrollbar {
-        display: none;
-      }
-
-      .mobile-menu {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-    </style>
   </head>
   <body>
     <!-- Header -->
     <header>
-      <!-- Nav -->
-      <nav
-        class="container mx-auto flex justify-between items-center px-4 sm:px-8 lg:px-[140px] bg-white"
-      >
-        <div>
-          <img
-            src="./images/icons/Logo.svg"
-            alt="Удобный переезд лого"
-            class="h-8 sm:h-10 w-auto"
-          />
-        </div>
-
-        <div class="hidden lg:flex gap-[74px] items-center">
-          <ul class="flex gap-[60px] items-center">
-            <li class="relative group z-2">
-              <a
-                class="font-medium cursor-pointer flex items-center gap-1 services-dropdown-trigger py-[30px]"
-                href="#"
-              >
-                Услуги
-                <svg
-                  class="w-4 h-4 transition-transform group-hover:rotate-180 dropdown-arrow"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M19 9l-7 7-7-7"
-                  ></path>
-                </svg>
-              </a>
-              <div
-                class="absolute top-[84px] left-[-10px] w-[302px] bg-white border border-gray-200 shadow-lg opacity-0 invisible services-dropdown-menu transition-all duration-200 z-50"
-              >
-                <div class="py-3 px-3">
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-gray-800 text-[16px] font-medium hover:text-green-600"
-                  >
-                    Квартирный переезд
-                  </a>
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-gray-800 text-[16px] font-medium hover:text-green-600"
-                  >
-                    Офисный переезд
-                  </a>
-                  <a
-                    href="#"
-                    class="block px-4 py-2 hover:text-green-600 text-[16px] font-medium"
-                  >
-                    Услуги грузчиков
-                  </a>
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-gray-800 text-[16px] font-medium hover:text-green-600"
-                  >
-                    Грузоперевозки
-                  </a>
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-gray-800 text-[16px] font-medium hover:text-green-600"
-                  >
-                    Разборка-сборка мебели
-                  </a>
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-gray-800 text-[16px] font-medium hover:text-green-600"
-                  >
-                    Монтаж кондиционера
-                  </a>
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-gray-800 text-[16px] font-medium hover:text-green-600"
-                  >
-                    Уборка
-                  </a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <a
-                class="font-medium hover:border-b-4 hover:border-[#52AE32] py-[31px]"
-                href="#"
-                >Партнеры</a
-              >
-            </li>
-            <li>
-              <a
-                class="font-medium hover:border-b-4 hover:border-[#52AE32] py-[31px]"
-                href="#"
-                >Галерея</a
-              >
-            </li>
-            <li>
-              <a
-                class="font-medium hover:border-b-4 hover:border-[#52AE32] py-[31px]"
-                href="#"
-                >О нас</a
-              >
-            </li>
-            <li>
-              <a
-                class="font-medium hover:border-b-4 hover:border-[#52AE32] py-[31px]"
-                href="#"
-                >Контакты</a
-              >
-            </li>
-          </ul>
-          <div class="flex gap-[30px] items-center">
-            <div>
-              <p class="font-semibold text-[15px]">+998 94 280 37 38</p>
-              <p class="font-semibold text-[15px]">+998 93 399 90 51</p>
-              <span class="font-normal text-[#7D7D7D] text-[12px]"
-                >c 8:00 до 21:00, ежедневно</span
-              >
-            </div>
-            <button
-              class="py-[15px] px-[39px] hover:border border transition-all duration-200"
-            >
-              Задать вопрос
-            </button>
-          </div>
-        </div>
-
-        <!-- Mobile menu button -->
-        <div class="lg:hidden">
-          <button
-            type="button"
-            class="mobile-menu-btn p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
-          >
-            <svg
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
-        </div>
-      </nav>
-
-      <!-- Mobile menu -->
+      <script src="./src/navbar.js"></script>
       <div
         class="mobile-menu fixed inset-y-0 left-0 z-50 w-full bg-white shadow-xl lg:hidden"
         id="mobile-menu"
@@ -333,44 +85,297 @@
 
       <!-- Hero -->
       <div
-        class="text-white bg-[url(../images/photos/hero-image.png)] w-full min-h-screen relative z-1 bg-cover bg-no-repeat bg-center"
+        class="relative w-full min-h-screen overflow-hidden carousel-container"
       >
-        <div
-          class="absolute z-1 left-0 right-0 text-center py-8 sm:py-16 lg:py-[247px] px-4"
-        >
-          <h1
-            class="text-2xl sm:text-3xl lg:text-[42px] font-bold max-w-[670px] mx-auto"
-          >
-            Квартирный и офисный переезд в Ташкенте "под ключ"
-          </h1>
-          <p
-            class="font-normal text-sm sm:text-base lg:text-[16px] mt-5 mb-[30px] max-w-[623px] mx-auto"
-          >
-            Грузчики по сути дела являются ключевыми фигурами в ходе
-            грузоперевозок. Они выполняют практически весь перечень работ при
-            переезде.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-5 justify-center">
-            <button class="py-4 px-5">Оставить заявку</button>
-            <button class="py-4 px-5">Калькулятор</button>
-          </div>
+        <div class="relative h-screen">
           <div
-            class="flex flex-col sm:flex-row gap-[15px] justify-center items-center pt-8 sm:pt-[87px] pb-8 sm:pb-[98px]"
+            class="carousel-slides flex transition-transform duration-500 ease-in-out h-full"
+            id="carousel"
           >
-            <p class="w-full sm:w-[150px] py-[6px] px-[15px] text-center">
-              Профессиональная упаковка
-            </p>
-            <p
-              class="w-full sm:w-[150px] py-[6px] px-[15px] border-t sm:border-t-0 sm:border-l sm:border-r border-[#A9A9A9] text-center"
+            <div class="carousel-slide min-w-full h-full relative">
+              <div class="absolute inset-0 bg-[#111111] opacity-30 z-10"></div>
+              <img
+                src="./images/photos/hero-image.png"
+                alt="Office Moving Services"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 z-20 flex items-center justify-center text-white px-4"
+              >
+                <div class="max-w-4xl">
+                  <h1 class="text-2xl sm:text-3x text-center lg:text-5xl font-bold mb-6">
+                    Квартирный и офисный переезд в Ташкенте "под ключ"
+                  </h1>
+                  <p
+                    class="text-sm sm:text-base lg:text-lg mb-8 max-w-2xl mx-auto"
+                  >
+                    Профессиональная упаковка и транспортировка офисной мебели и
+                    оборудования
+                  </p>
+                  <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="py-4 px-8 hover:bg-white" id="openModalBtn">
+                      Оставить заявку
+                    </button>
+                    <button class="py-4 px-8 hover:bg-white">
+                      Калькулятор
+                    </button>
+                  </div>
+                  <div
+                    id="modalOverlay"
+                    class="modal-overlay fixed inset-0 bg-black opacity-50 z-40 flex items-center justify-center p-4"
+                  >
+                    <div
+                      id="formModal"
+                      class="modal bg-white shadow-2xl w-[500px] modal-content"
+                    >
+                      <div class="p-6">
+                        <div
+                          class="flex mt-[-100px] justify-between items-center"
+                        >
+                          <h2 class="text-xl font-semibold text-green-600">
+                            Оставить заявку
+                          </h2>
+                          <p
+                            id="closeModalBtn"
+                            class="text-gray-400 cursor-pointer hover:text-gray-600 text-2xl w-8 h-8 mt-[60px] rounded-full hover:bg-gray-100 transition-colors"
+                          >
+                            ×
+                          </p>
+                        </div>
+
+                        <form id="applicationForm">
+                          <div class="mb-4">
+                            <label
+                              class="block text-gray-700 text-sm font-medium mb-2"
+                            >
+                              Введите имя<span class="text-red-500">*</span>
+                            </label>
+                            <input
+                              type="text"
+                              id="name"
+                              required
+                              class="w-full px-4 py-3 text-black bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                            />
+                          </div>
+
+                          <div class="mb-4">
+                            <label
+                              class="block text-gray-700 text-sm font-medium mb-2"
+                            >
+                              Номер телефона<span class="text-red-500">*</span>
+                            </label>
+                            <input
+                              type="tel"
+                              id="phone"
+                              placeholder="+998 97 217 75 56"
+                              required
+                              class="w-full px-4 py-3 text-black bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all placeholder-gray-400"
+                            />
+                          </div>
+
+                          <div class="mb-6">
+                            <label
+                              class="block text-gray-700 text-sm font-medium mb-2"
+                            >
+                              Сообщение
+                            </label>
+                            <textarea
+                              id="message"
+                              rows="4"
+                              class="w-full px-4 py-3 text-black bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all resize-none"
+                            ></textarea>
+                          </div>
+
+                          <button
+                            type="submit"
+                            class="w-full py-4 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors duration-200 font-medium text-lg shadow-lg hover:shadow-xl"
+                          >
+                            Отправить
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+
+                    <div
+                      id="successModal"
+                      class="modal bg-white rounded-2xl shadow-2xl w-full max-w-md modal-content"
+                    >
+                      <div class="p-8 text-center">
+                        <div
+                          class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg"
+                        >
+                          <svg
+                            class="w-10 h-10 text-white"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="3"
+                              d="M5 13l4 4L19 7"
+                            ></path>
+                          </svg>
+                        </div>
+
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">
+                          Успешно оформлено!
+                        </h2>
+                        <p class="text-gray-500 mb-8">Оператор позвонит вам</p>
+
+                        <button
+                          id="okBtn"
+                          class="w-full py-4 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors duration-200 font-medium text-lg shadow-lg hover:shadow-xl"
+                        >
+                          Понятно
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-slide min-w-full h-full relative">
+              <div class="absolute inset-0 bg-[#111111] opacity-30 z-10"></div>
+              <img
+                src="./images/photos/hero-image2.png"
+                alt="Office Moving Services"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 z-20 flex items-center justify-center text-white px-4"
+              >
+                <div class="text-center max-w-4xl">
+                  <h1 class="text-2xl sm:text-3xl lg:text-5xl font-bold mb-6">
+                    Услуги грузчиков в Ташкенте
+                  </h1>
+                  <p
+                    class="text-sm sm:text-base lg:text-lg mb-8 max-w-2xl mx-auto"
+                  >
+                    Грузчики по сути дела являются ключевыми фигурами в ходе
+                    грузоперевозок. Они выполняют практически весь перечень
+                    работ при переезде.
+                  </p>
+                  <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="py-4 px-8">Оставить заявку</button>
+                    <button class="py-4 px-8">Калькулятор</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-slide min-w-full h-full relative">
+              <div class="absolute inset-0 bg-[#111111] opacity-30 z-10"></div>
+              <img
+                src="./images/photos/hero-image3.png"
+                alt="Office Moving Services"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 z-20 flex items-center justify-center text-white px-4"
+              >
+                <div class="text-center max-w-4xl">
+                  <h1 class="text-2xl sm:text-3xl lg:text-5xl font-bold mb-6">
+                    Кондиционер монтаж в Ташкенте
+                  </h1>
+                  <p
+                    class="text-sm sm:text-base lg:text-lg mb-8 max-w-2xl mx-auto"
+                  >
+                    Нужна качественная установка кондиционера в квартире, офисе
+                    или коммерческом помещении?
+                  </p>
+                  <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="py-4 px-8">Оставить заявку</button>
+                    <button class="py-4 px-8">Калькулятор</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-slide min-w-full h-full relative">
+              <div class="absolute inset-0 bg-[#111111] opacity-30 z-10"></div>
+              <img
+                src="./images/photos/hero-image4.png"
+                alt="Office Moving Services"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 z-20 flex items-center justify-center text-white px-4"
+              >
+                <div class="text-center max-w-4xl">
+                  <h1 class="text-2xl sm:text-3xl lg:text-5xl font-bold mb-6">
+                    Разборка-сборка мебели в Ташкенте
+                  </h1>
+                  <p
+                    class="text-sm sm:text-base lg:text-lg mb-8 max-w-2xl mx-auto"
+                  >
+                    Наша компания предоставляет профессиональные услуги по
+                    разборке и сборке мебели в Ташкенте: шкафов, кроватей,
+                    кухонь, столов, стенок и любой другой корпусной мебели.
+                  </p>
+                  <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="py-4 px-8">Оставить заявку</button>
+                    <button class="py-4 px-8">Калькулятор</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="absolute cursor-pointer left-4 top-1/2 transform -translate-y-1/2 z-30 p-3 rounded-full transition-all duration-200"
+            id="prevBtn"
+          >
+            <img src="./images/icons/prewious.svg" alt="" />
+          </div>
+
+          <div
+            class="absolute cursor-pointer right-4 top-1/2 transform -translate-y-1/2 z-30 p-3 rounded-full transition-all duration-200"
+            id="nextBtn"
+          >
+            <img src="./images/icons/next.svg" alt="" />
+          </div>
+
+          <div
+            class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 flex space-x-3"
+            id="indicators"
+          >
+            <div
+              class="w-3 h-3 rounded-full bg-white hover:opacity-100 cursor-pointer hover:bg-[#52AE32] opacity-40 transition-all duration-200 indicator active"
+              data-slide="0"
+            ></div>
+            <div
+              class="w-3 h-3 rounded-full bg-white hover:opacity-100 cursor-pointer hover:bg-[#52AE32] opacity-40 transition-all duration-200 indicator"
+              data-slide="1"
+            ></div>
+            <div
+              class="w-3 h-3 rounded-full bg-white hover:opacity-100 cursor-pointer hover:bg-[#52AE32] opacity-40 transition-all duration-200 indicator"
+              data-slide="2"
+            ></div>
+            <div
+              class="w-3 h-3 rounded-full bg-white hover:opacity-100 cursor-pointer hover:bg-[#52AE32] opacity-40 transition-all duration-200 indicator"
+              data-slide="3"
+            ></div>
+          </div>
+
+          <div
+            class="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-30 hidden lg:flex items-center space-x-8 text-white text-sm"
+          >
+            <div class="text-center px-4 py-2">
+              <p>Профессиональная упаковка</p>
+            </div>
+            <div
+              class="text-center px-4 py-2 border-l border-r border-gray-400"
             >
-              Индивидуальный подход
-            </p>
-            <p class="w-full sm:w-[185px] py-[6px] px-[15px] text-center">
-              Многолетний опыт в области
-            </p>
+              <p>Индивидуальный подход</p>
+            </div>
+            <div class="text-center px-4 py-2">
+              <p>Многолетний опыт в области</p>
+            </div>
           </div>
         </div>
-        <div class="bg-[#202020] w-full h-full opacity-55 absolute top-0"></div>
       </div>
     </header>
 
@@ -1224,334 +1229,9 @@
       </section>
     </main>
 
-    <!-- Footer -->
-    <footer>
-      <hr
-        class="border border-[#EAEAEA] w-full max-w-[1320px] flex mx-auto mb-8 sm:mb-12 lg:mb-[74px]"
-      />
-      <div class="flex flex-col lg:flex-row justify-center px-4 sm:px-8">
-        <div class="mb-8 lg:mb-0">
-          <img
-            src="./images/icons/Logo.svg"
-            alt="WebSite Logo"
-            class="h-8 w-auto"
-          />
-        </div>
-        <div
-          class="ml-0 lg:ml-[255px] mr-0 lg:mr-[235px] flex flex-col gap-8 lg:gap-[60px] mb-8 lg:mb-0"
-        >
-          <div>
-            <h3
-              class="text-[#202020] font-medium text-base lg:text-[16px] mb-[30px]"
-            >
-              Меню
-            </h3>
-            <ul class="flex flex-col gap-5">
-              <li>
-                <a
-                  class="text-[#C0C0C0] text-base sm:text-lg lg:text-[18px]"
-                  href="#"
-                  >Главная</a
-                >
-              </li>
-              <li>
-                <a
-                  class="text-[#C0C0C0] text-base sm:text-lg lg:text-[18px]"
-                  href="#"
-                  >О нас</a
-                >
-              </li>
-              <li>
-                <a
-                  class="text-[#C0C0C0] text-base sm:text-lg lg:text-[18px]"
-                  href="#"
-                  >Партнеры</a
-                >
-              </li>
-              <li>
-                <a
-                  class="text-[#C0C0C0] text-base sm:text-lg lg:text-[18px]"
-                  href="#"
-                  >Галерея</a
-                >
-              </li>
-              <li>
-                <a
-                  class="text-[#C0C0C0] text-base sm:text-lg lg:text-[18px]"
-                  href="#"
-                  >Услуги</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3
-              class="text-[#202020] font-medium text-base lg:text-[16px] mb-[30px]"
-            >
-              Социальные сети
-            </h3>
-            <ul class="flex gap-5">
-              <li>
-                <a href="#"
-                  ><img
-                    src="./images/icons/instagram.svg"
-                    alt="Instagram Icon"
-                    class="w-6 h-6"
-                /></a>
-              </li>
-              <li>
-                <a href="#"
-                  ><img
-                    src="./images/icons/telegram.svg"
-                    alt="Telegram Icon"
-                    class="w-6 h-6"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#"
-                  ><img
-                    src="./images/icons/facebook.svg"
-                    alt="Facebook Icon"
-                    class="w-6 h-6"
-                /></a>
-              </li>
-              <li>
-                <a href="#"
-                  ><img
-                    src="./images/icons/youtubeFooter.svg"
-                    alt="YouTube Icon"
-                    class="w-6 h-6"
-                /></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="flex flex-col gap-8 lg:gap-[60px]">
-          <div>
-            <h3
-              class="text-[#202020] font-medium text-base lg:text-[16px] mb-[30px]"
-            >
-              Контакты
-            </h3>
-            <div class="flex flex-col gap-5">
-              <div class="flex gap-[10px]">
-                <img
-                  src="./images/icons/carbon_location.svg"
-                  alt="Location Icon"
-                  class="w-5 h-5 flex-shrink-0"
-                />
-                <p class="text-[#C0C0C0] text-base sm:text-lg lg:text-[18px]">
-                  ул.Себзар М17/18, 4дом, 3кв
-                </p>
-              </div>
-              <div class="flex gap-[10px]">
-                <img
-                  src="./images/icons/carbon_mail.svg"
-                  alt="Mail Icon"
-                  class="w-5 h-5 flex-shrink-0"
-                />
-                <p class="text-[#C0C0C0] text-base sm:text-lg lg:text-[18px]">
-                  info@eastline.uz
-                </p>
-              </div>
-              <div class="flex gap-[10px]">
-                <img
-                  src="./images/icons/carbon_phone.svg"
-                  alt="Phone Icon"
-                  class="w-5 h-5 flex-shrink-0"
-                />
-                <p class="text-[#C0C0C0] text-base sm:text-lg lg:text-[18px]">
-                  +998 94 280 37 38
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <hr
-        class="border border-[#EAEAEA] w-full max-w-[1320px] flex mx-auto mt-8 sm:mt-12 lg:mt-[74px] mb-8 sm:mb-12 lg:mb-[74px]"
-      />
-      <p
-        class="text-[#C0C0C0] text-center text-base sm:text-lg lg:text-[18px] pb-8 sm:pb-12 lg:pb-[74px] px-4"
-      >
-        © 2024 Eastline Pereezd. Все права защищены.
-      </p>
-    </footer>
-
-    <script>
-      const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
-      const mobileMenu = document.getElementById("mobile-menu");
-      const mobileMenuClose = document.querySelector(".mobile-menu-close");
-      const mobileMenuLinks = document.querySelectorAll(".mobile-menu-link");
-
-      function openMobileMenu() {
-        mobileMenu.classList.add("open");
-        document.body.style.overflow = "hidden";
-      }
-
-      function closeMobileMenu() {
-        mobileMenu.classList.remove("open");
-        document.body.style.overflow = "";
-      }
-
-      mobileMenuBtn.addEventListener("click", openMobileMenu);
-      mobileMenuClose.addEventListener("click", closeMobileMenu);
-
-      mobileMenuLinks.forEach((link) => {
-        link.addEventListener("click", closeMobileMenu);
-      });
-
-      mobileMenu.addEventListener("click", (e) => {
-        if (e.target === mobileMenu) {
-          closeMobileMenu();
-        }
-      });
-
-      const servicesDropdownTrigger = document.querySelector(
-        ".services-dropdown-trigger"
-      );
-      const servicesDropdownMenu = document.querySelector(
-        ".services-dropdown-menu"
-      );
-      const dropdownArrow = document.querySelector(".dropdown-arrow");
-
-      let isOpen = false;
-
-      function openDropdown() {
-        if (!isOpen) {
-          isOpen = true;
-          servicesDropdownMenu.classList.remove("opacity-0", "invisible");
-          servicesDropdownMenu.classList.add("opacity-100", "visible");
-          dropdownArrow.style.transform = "rotate(180deg)";
-        }
-      }
-
-      function closeDropdown() {
-        if (isOpen) {
-          isOpen = false;
-          servicesDropdownMenu.classList.remove("opacity-100", "visible");
-          servicesDropdownMenu.classList.add("opacity-0", "invisible");
-          dropdownArrow.style.transform = "rotate(0deg)";
-        }
-      }
-
-      servicesDropdownTrigger.addEventListener("click", openDropdown);
-
-      servicesDropdownTrigger.addEventListener("mouseleave", function (event) {
-        setTimeout(() => {
-          if (
-            !servicesDropdownMenu.matches(":hover") &&
-            !servicesDropdownTrigger.matches(":hover")
-          ) {
-            closeDropdown();
-          }
-        }, 50);
-      });
-
-      servicesDropdownMenu.addEventListener("mouseleave", function (event) {
-        setTimeout(() => {
-          if (
-            !servicesDropdownMenu.matches(":hover") &&
-            !servicesDropdownTrigger.matches(":hover")
-          ) {
-            closeDropdown();
-          }
-        }, 50);
-      });
-      document.addEventListener("click", function (event) {
-        if (
-          !servicesDropdownTrigger.contains(event.target) &&
-          !servicesDropdownMenu.contains(event.target)
-        ) {
-          if (isOpen) {
-            toggleDropdown();
-          }
-        }
-      });
-
-      const forms = document.querySelectorAll("form");
-
-      forms.forEach((form) => {
-        form.addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          const nameInput = form.querySelector('input[placeholder*="имя"]');
-          const phoneInput = form.querySelector(
-            'input[placeholder*="телефон"]'
-          );
-
-          let isValid = true;
-
-          form.querySelectorAll("input").forEach((input) => {
-            input.classList.remove("border-red-500", "border-green-500");
-          });
-
-          if (nameInput && nameInput.value.trim().length < 2) {
-            nameInput.classList.add("border-red-500");
-            isValid = false;
-          } else if (nameInput) {
-            nameInput.classList.add("border-green-500");
-          }
-
-          if (phoneInput && phoneInput.value.trim().length < 9) {
-            phoneInput.classList.add("border-red-500");
-            isValid = false;
-          } else if (phoneInput) {
-            phoneInput.classList.add("border-green-500");
-          }
-
-          if (isValid) {
-            const button = form.querySelector(
-              'button[type="submit"], button:not([type])'
-            );
-            const originalText = button.textContent;
-            button.textContent = "Заявка отправлена!";
-            button.style.backgroundColor = "#22c55e";
-
-            setTimeout(() => {
-              button.textContent = originalText;
-              button.style.backgroundColor = "";
-              form.reset();
-              form.querySelectorAll("input").forEach((input) => {
-                input.classList.remove("border-green-500");
-              });
-            }, 3000);
-          }
-        });
-      });
-
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-          }
-        });
-      });
-
-      document.querySelectorAll("button").forEach((button) => {
-        button.addEventListener("click", function () {
-          if (
-            this.type !== "submit" &&
-            !this.classList.contains("mobile-menu-btn") &&
-            !this.classList.contains("mobile-menu-close")
-          ) {
-            const originalText = this.textContent;
-            this.textContent = "Загрузка...";
-            this.disabled = true;
-
-            setTimeout(() => {
-              this.textContent = originalText;
-              this.disabled = false;
-            }, 2000);
-          }
-        });
-      });
-    </script>
+    <script src="./src/footer.js"></script>
+    
+    <!-- JavaScript Link -->
+    <script src="./src/app.js"></script>
   </body>
 </html>

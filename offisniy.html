@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="stylesheet" href="./src/styles.css" />
+    <title>Квартирный переезд в Ташкенте</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="container mx-auto flex justify-between items-center px-4 sm:px-8 lg:px-[140px] bg-white"
+    >
+      <a href="./index.html">
+        <img
+          src="./images/icons/Logo.svg"
+          alt="Удобный переезд лого"
+          class="h-8 sm:h-10 w-auto"
+        />
+      </a>
+
+      <div class="hidden lg:flex gap-[74px] items-center">
+        <ul class="flex gap-[60px] items-center">
+          <li class="relative group z-21">
+            <a
+              class="font-medium cursor-pointer flex items-center gap-1 services-dropdown-trigger py-[30px]"
+              href="#"
+            >
+              Услуги
+              <svg
+                class="w-4 h-4 transition-transform group-hover:rotate-180 dropdown-arrow"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </a>
+            <div
+              class="absolute top-[84px] left-[-10px] w-[302px] bg-white border border-gray-200 shadow-lg opacity-0 invisible services-dropdown-menu transition-all duration-200 z-50"
+            >
+              <div class="py-3 px-3">
+                <a
+                  href="./kvartirniy.html"
+                  class="block px-4 py-2 text-gray-800 text-[16px] font-medium hover:text-green-600"
+                >
+                  Квартирный переезд
+                </a>
+                <a
+                  href="./offisniy.html"
+                  class="block px-4 py-2 text-gray-800 text-[16px] font-medium hover:text-green-600"
+                >
+                  Офисный переезд
+                </a>
+                <a
+                  href="./gruzchik.html"
+                  class="block px-4 py-2 hover:text-green-600 text-[16px] font-medium"
+                >
+                  Услуги грузчиков
+                </a>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-800 text-[16px] font-medium hover:text-green-600"
+                >
+                  Грузоперевозки
+                </a>
+                <a
+                  href="./razborka.html"
+                  class="block px-4 py-2 text-gray-800 text-[16px] font-medium hover:text-green-600"
+                >
+                  Разборка-сборка мебели
+                </a>
+                <a
+                  href="./montaj.html"
+                  class="block px-4 py-2 text-gray-800 text-[16px] font-medium hover:text-green-600"
+                >
+                  Монтаж кондиционера
+                </a>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-800 text-[16px] font-medium hover:text-green-600"
+                >
+                  Уборка
+                </a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a
+              class="font-medium hover:border-b-4 hover:border-[#52AE32] py-[31px]"
+              href="#"
+              >Партнеры</a
+            >
+          </li>
+          <li>
+            <a
+              class="font-medium hover:border-b-4 hover:border-[#52AE32] py-[31px]"
+              href="#"
+              >Галерея</a
+            >
+          </li>
+          <li>
+            <a
+              class="font-medium hover:border-b-4 hover:border-[#52AE32] py-[31px]"
+              href="#"
+              >О нас</a
+            >
+          </li>
+          <li>
+            <a
+              class="font-medium hover:border-b-4 hover:border-[#52AE32] py-[31px]"
+              href="#"
+              >Контакты</a
+            >
+          </li>
+        </ul>
+        <div class="flex gap-[30px] items-center">
+          <div class="flex flex-col">
+            <a href="tel:+998942803738" class="font-semibold text-[15px]"
+              >+998 94 280 37 38</a
+            >
+            <a href="tel:+998933999051" class="font-semibold text-[15px]"
+              >+998 93 399 90 51</a
+            >
+            <span class="font-normal text-[#7D7D7D] text-[12px]"
+              >c 8:00 до 21:00, ежедневно</span
+            >
+          </div>
+          <button
+            class="py-[15px] px-[39px] hover:border border transition-all duration-200"
+          >
+            Задать вопрос
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="lg:hidden">
+        <button
+          type="button"
+          class="mobile-menu-btn p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+        >
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+    <!-- Mobile menu -->
+    <div
+      class="mobile-menu fixed inset-y-0 left-0 z-50 w-full bg-white shadow-xl lg:hidden"
+      id="mobile-menu"
+    >
+      <div class="flex flex-col h-full">
+        <div class="flex items-center justify-between p-4 border-b">
+          <img
+            src="./images/icons/Logo.svg"
+            alt="Удобный переезд лого"
+            class="h-8 w-auto"
+          />
+          <button class="mobile-menu-close p-2 rounded-md text-gray-600">
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="flex-1 overflow-y-auto py-6 px-4">
+          <nav class="space-y-4">
+            <a
+              href="#"
+              class="mobile-menu-link block py-3 px-4 text-lg font-medium text-gray-900 hover:bg-gray-50 rounded-md"
+              >Услуги</a
+            >
+            <a
+              href="#"
+              class="mobile-menu-link block py-3 px-4 text-lg font-medium text-gray-900 hover:bg-gray-50 rounded-md"
+              >Партнеры</a
+            >
+            <a
+              href="#"
+              class="mobile-menu-link block py-3 px-4 text-lg font-medium text-gray-900 hover:bg-gray-50 rounded-md"
+              >Галерея</a
+            >
+            <a
+              href="#"
+              class="mobile-menu-link block py-3 px-4 text-lg font-medium text-gray-900 hover:bg-gray-50 rounded-md"
+              >О нас</a
+            >
+            <a
+              href="#"
+              class="mobile-menu-link block py-3 px-4 text-lg font-medium text-gray-900 hover:bg-gray-50 rounded-md"
+              >Контакты</a
+            >
+          </nav>
+        </div>
+
+        <div class="border-t p-4">
+          <div class="text-center mb-4">
+            <p class="font-semibold text-lg">+998 93 399 90 51</p>
+            <span class="text-gray-500 text-sm"
+              >c 8:00 до 21:00, ежедневно</span
+            >
+          </div>
+          <button class="w-full py-3 px-6 rounded-md">Задать вопрос</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main -->
+    <main class="container mx-auto px-4 sm:px-8 lg:px-[140px] py-8 lg:py-16">
+      <div class="max-w-[700px] mx-auto">
+        <div class="mt-[60px] mb-5">
+          <img
+            src="./images/photos/hero-image3.png"
+            alt="Квартирный переезд - коробки, мебель и растения готовые к переезду"
+            class="w-full mx-auto"
+          />
+        </div>
+
+        <h1
+          class="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-[#52AE32] mb-5 lg:mb-8"
+        >
+          Офисный переезд в Ташкенте
+        </h1>
+
+        <div
+          class="text-[#414141] items-stretch sm:text-lg w-[700px] mb-8 lg:mb-12 mx-auto"
+        >
+          <p>
+            Офисный переезд - это процесс перемещения офиса или рабочего
+            пространства из одного места в другое. Он может быть вызван
+            различными причинами, такими как расширение компании, изменение
+            места работы или сокращение затрат на аренду. Организация офисного
+            переезда требует более тщательной планировки и координации, чем
+            квартирный переезд, так как в офисе обычно работает много людей и
+            имеется большое количество оборудования, документов и других
+            ценностей. Перед переездом следует разработать подробный план,
+            определить бюджет, заранее оценить объем перевозимого оборудования и
+            имущества и спланировать логистические аспекты переезда. Важными
+            этапами офисного переезда являются:
+            <br />
+            <br />
+            1. Уведомление сотрудников: сообщите всем сотрудникам о переезде
+            заранее, чтобы они могли подготовиться.
+            <br />
+            <br />
+            2. Упаковка и пометка: упакуйте мебель, оборудование и документы в
+            специальные коробки или контейнеры. Пометьте каждый предмет, чтобы
+            облегчить распаковку и расстановку в новом офисе.
+            <br />
+            <br />
+            3. Использование профессиональных услуг: при необходимости
+            обратитесь к специализированным компаниям, которые оказывают услуги
+            по переезду офиса. Они обладают опытом в организации переездов,
+            имеют нужное оборудование и могут обеспечить безопасную и
+            качественную перевозку.
+            <br />
+            <br />
+            4. Инфраструктура: заранее подготовьте новый офисный пространство,
+            проверьте наличие необходимой инфраструктуры – электричество,
+            интернет, телефоны, мебель и т.д.
+            <br />
+            <br />
+            5. Обновление данных: обновите адреса и контактные данные во всех
+            документах и системах, уведомите клиентов и партнеров о новом месте
+            нахождения офиса.
+            <br />
+            <br />
+            6. Планировка и расстановка: создайте план нового офисного
+            пространства, чтобы убедиться, что все мебель и оборудование
+            размещены удобно и эффективно.
+            <br />
+            <br />
+            7. Пробный переезд: проведите пробный переезд, чтобы убедиться, что
+            все системы работают нормально, а новое офисное пространство
+            соответствует потребностям компании. Офисный переезд может быть
+            сложным и требовательным процессом, но с правильной планировкой и
+            организацией он может пройти успешно и без перебоев. Важно уделить
+            достаточно времени для подготовки и внимательно следовать плану,
+            чтобы минимизировать временные и финансовые потери.
+          </p>
+        </div>
+
+        <button
+          class="text-white flex mx-auto font-semibold py-4 px-8 transition-colors duration-200 text-lg"
+        >
+          Оставить заявку
+        </button>
+      </div>
+    </main>
+
+    <script src="./src/footer.js"></script>
+
+    <!-- JavaScript Link -->
+    <script src="./src/app.js"></script>
+  </body>
+</html>
