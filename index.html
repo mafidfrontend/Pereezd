@@ -136,7 +136,8 @@
                 >c 8:00 до 21:00, ежедневно</span
               >
             </div>
-            <button id="openModalBtn"
+            <button
+              id="openFormModalBtn"
               class="py-[15px] px-[39px] hover:border border transition-all duration-200"
             >
               Задать вопрос
@@ -400,35 +401,36 @@
             </div>
           </div>
           <div
-            class="absolute top-[550px] left-[760px] z-50 hidden lg:flex items-center"
+            class="absolute top-[550px] left-[760px] z-49 hidden lg:flex items-center"
           >
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-              <button class="py-4 px-8 hover:bg-white" id="openModalBtn">
+              <button id="openFormModalBtn2" class="py-4 px-8 hover:bg-white">
                 Оставить заявку
               </button>
               <button id="openModalBtn1" class="py-4 px-8 hover:bg-white">
                 Калькулятор
               </button>
             </div>
+            <!-- Form Modal -->
             <div
-              id="modalOverlay"
-              class="modal-overlay fixed inset-0 bg-gray-400 opacity-5 z-50 flex items-center justify-center p-4"
+              id="formModalOverlay"
+              class="modal-overlay fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
             >
               <div
                 id="formModal"
-                class="modal bg-white shadow-2xl w-[500px] modal-content relative left-52"
+                class="modal bg-white rounded-lg shadow-xl w-full max-w-md"
               >
                 <div class="p-6">
-                  <div class="flex justify-between items-center pt-[-300px]">
-                    <h2 class="text-[20px] font-semibold mt-5 text-green-600 leading-4">
-                      Оставить заявку
+                  <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-xl mt-5 mb-[-50px] font-semibold text-green-600">
+                      Задать вопрос
                     </h2>
-                    <p
-                      id="closeModalBtn"
-                      class="text-gray-400 mt-[-30px] cursor-pointer hover:text-gray-600 text-2xl w-8 h-8 rounded-full hover:bg-gray-100 transition-colors"
+                    <button
+                      id="closeFormModalBtn"
+                      class="text-gray-400 mt-4 hover:text-gray-600 text-2xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors"
                     >
                       ×
-                    </p>
+                    </button>
                   </div>
 
                   <form id="applicationForm">
@@ -441,9 +443,8 @@
                       <input
                         type="text"
                         id="name"
-                        value="ab"
                         required
-                        class="w-full px-4 py-3 text-black bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                        class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
                       />
                     </div>
 
@@ -455,11 +456,10 @@
                       </label>
                       <input
                         type="tel"
-                        value="ab"
                         id="phone"
                         placeholder="+998 97 217 75 56"
                         required
-                        class="w-full px-4 py-3 text-black bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all placeholder-gray-400"
+                        class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all placeholder-gray-400"
                       />
                     </div>
 
@@ -472,7 +472,7 @@
                       <textarea
                         id="message"
                         rows="4"
-                        class="w-full px-4 py-3 text-black bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all resize-none"
+                        class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all resize-none"
                       ></textarea>
                     </div>
 
@@ -485,17 +485,23 @@
                   </form>
                 </div>
               </div>
+            </div>
 
+            <!-- Success Modal -->
+            <div
+              id="successModalOverlay"
+              class="modal-overlay fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
+            >
               <div
                 id="successModal"
-                class="modal bg-white shadow-2xl w-[417px] modal-content relative left-[-260px]"
+                class="modal bg-white rounded-lg shadow-xl w-full max-w-sm"
               >
                 <div class="p-8 text-center">
                   <div
-                    class="w-[71px] h-[71px] bg-green-500 rounded-full flex items-center justify-center mx-auto shadow-lg"
+                    class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg"
                   >
                     <svg
-                      class="w-10 h-10 text-white"
+                      class="w-8 h-8 text-white"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -509,32 +515,29 @@
                     </svg>
                   </div>
 
-                  <h2 class="text-xl mt-3 font-semibold text-gray-800">
+                  <h2 class="text-xl font-semibold text-gray-800 mb-2">
                     Успешно оформлено!
                   </h2>
-                  <p class="text-gray-500 mt-[-70px] mb-8">
-                    Оператор позвонит вам
-                  </p>
+                  <p class="text-gray-500 mb-6">Оператор позвонит вам</p>
 
                   <button
                     id="okBtn"
-                    class="w-full py-4 bg-green-500 text-white hover:bg-green-600 transition-colors duration-200 font-medium text-lg shadow-lg hover:shadow-xl"
+                    class="w-full py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors duration-200 font-medium shadow-lg hover:shadow-xl"
                   >
                     Понятно
                   </button>
                 </div>
               </div>
             </div>
+
+            <!-- Calculator Modal -->
             <div
-              id="modalBackdrop"
-              class="fixed inset-0 bg-gray-400 opacity-5 z-40 hidden transition-opacity duration-300"
-            ></div>
-            <div
-              id="calculatorModal"
-              class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden"
+              id="calculatorModalOverlay"
+              class="modal-overlay fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
             >
               <div
-                class="bg-white rounded-lg shadow-xl max-w-md w-full max-h-[90vh] overflow-y-auto transform scale-95 transition-transform duration-300"
+                id="calculatorModal"
+                class="modal bg-white rounded-lg shadow-xl w-full max-w-md max-h-[90vh] overflow-y-auto"
               >
                 <div
                   class="flex justify-between items-center p-6 border-b border-gray-200"
@@ -543,7 +546,7 @@
                     Калькулятор
                   </h1>
                   <button
-                    id="closeModalBtn1"
+                    id="closeCalculatorModalBtn"
                     class="text-gray-400 hover:text-gray-600 transition-colors"
                   >
                     <svg
@@ -567,41 +570,24 @@
                     <label class="block text-sm text-gray-500 mb-2"
                       >Адрес погрузки</label
                     >
-                    <div class="relative">
-                      <input
-                        type="text"
-                        id="pickupAddress"
-                        class="w-full p-3 bg-gray-100 rounded-lg border-0 focus:ring-2 focus:ring-green-500 focus:bg-white transition-colors"
-                        placeholder="Введите адрес погрузки"
-                      />
-                    </div>
+                    <input
+                      type="text"
+                      id="pickupAddress"
+                      class="w-full p-3 bg-gray-100 rounded-lg border-0 focus:ring-2 focus:ring-green-500 focus:bg-white transition-colors"
+                      placeholder="Введите адрес погрузки"
+                    />
                   </div>
 
                   <div class="mb-4">
                     <label class="block text-sm text-gray-500 mb-2"
                       >Адрес выгрузки</label
                     >
-                    <div class="relative">
-                      <input
-                        type="text"
-                        id="deliveryAddress"
-                        class="w-full p-3 bg-gray-100 rounded-lg border-0 focus:ring-2 focus:ring-green-500 focus:bg-white transition-colors"
-                        placeholder="Введите адрес выгрузки"
-                      />
-                      <svg
-                        class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
-                        ></path>
-                      </svg>
-                    </div>
+                    <input
+                      type="text"
+                      id="deliveryAddress"
+                      class="w-full p-3 bg-gray-100 rounded-lg border-0 focus:ring-2 focus:ring-green-500 focus:bg-white transition-colors"
+                      placeholder="Введите адрес выгрузки"
+                    />
                   </div>
 
                   <div class="grid grid-cols-2 gap-4 mb-4">
@@ -688,7 +674,7 @@
                       >
                       <input
                         type="tel"
-                        id="phoneNumber"
+                        id="calcPhoneNumber"
                         class="w-full p-3 bg-gray-100 rounded-lg border-0 focus:ring-2 focus:ring-green-500 focus:bg-white"
                         placeholder="+998"
                         value="+998"
@@ -708,29 +694,10 @@
                     ></textarea>
                   </div>
 
-                  <div
-                    id="warningText"
-                    class="text-xs text-gray-500 mb-4 hidden"
-                  >
-                    Для оформления заказа, укажите
-                    <span
-                      class="text-green-600 underline cursor-pointer"
-                      onclick="focusPhone()"
-                      >номер телефона</span
-                    >
-                    и заполните
-                    <span
-                      class="text-green-600 underline cursor-pointer"
-                      onclick="focusPickup()"
-                      >Адрес погрузки</span
-                    >
-                  </div>
-
                   <button
                     type="button"
-                    id="submitButton"
-                    class="w-full py-4 rounded-lg font-medium text-white transition-all duration-300 bg-gray-400 cursor-not-allowed"
-                    disabled
+                    id="submitCalculatorBtn"
+                    class="w-full py-4 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-all duration-300 font-medium"
                   >
                     Оформить
                   </button>
@@ -1368,14 +1335,18 @@
           <input
             class="bg-[#F3F3F3] py-5 px-5 rounded-md flex-1 max-w-xs"
             type="text"
+            id="input1"
+            required
             placeholder="Введите имя*"
           />
           <input
             class="bg-[#F3F3F3] py-5 px-5 no-spinner rounded-md flex-1 max-w-xs"
             type="number"
+            required
+            id="input2"
             placeholder="Введите телефон*"
           />
-          <button class="py-5 px-[47px] rounded-md">Оставить заявку</button>
+          <button class="py-5 px-[47px] rounded-md" onclick="showSuccessModal()">Оставить заявку</button>
         </form>
       </section>
 
@@ -1571,24 +1542,31 @@
               <input
                 class="bg-[#F3F3F3] py-5 px-5 w-full rounded-md"
                 type="text"
+                required
+                id="input3"
                 placeholder="Введите имя*"
               />
               <input
                 class="bg-[#F3F3F3] py-5 px-5 w-full no-spinner rounded-md"
                 type="number"
+                required
+                id="input4"
                 placeholder="Введите телефон*"
               />
             </div>
             <input
               type="email"
+              required
+              id="input5"
               placeholder="Электронная почта"
               class="bg-[#F3F3F3] py-5 px-5 w-full my-[30px] rounded-md"
             />
             <textarea
               placeholder="Сообщение..."
+              id="input6"
               class="bg-[#F3F3F3] py-5 px-5 w-full h-[192px] rounded-md resize-vertical"
             ></textarea>
-            <button class="py-5 px-[47px] mt-[30px] rounded-md">
+            <button onclick="showSuccessModal()" class="py-5 px-[47px] mt-[30px] rounded-md">
               Оставить заявку
             </button>
           </form>

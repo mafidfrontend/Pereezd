@@ -137,35 +137,6 @@ html {
   scrollbar-width: none;
 }
 
-.modal {
-  opacity: 0;
-  visibility: hidden;
-  transform: scale(0.9);
-  transition: all 0.3s ease-in-out;
-}
-
-.modal.open {
-  opacity: 1;
-  visibility: visible;
-  transform: scale(1);
-}
-
-.modal-overlay {
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease-in-out;
-}
-
-.modal-overlay.open {
-  opacity: 1;
-  visibility: visible;
-}
-
-.modal-content {
-  max-height: 90vh;
-  overflow-y: auto;
-}
-
 .hover-transition {
   transition: opacity 0.3s ease-in-out;
 }
@@ -189,4 +160,49 @@ a:hover {
 
 .scale-hover {
   transform: scale(1.02);
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: white;
+  border-radius: 8px;
+  max-width: 30%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
 }

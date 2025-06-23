@@ -1,98 +1,136 @@
-const openModalBtn = document.getElementById("openModalBtn");
-const closeModalBtn = document.getElementById("closeModalBtn");
-const modalOverlay = document.getElementById("modalOverlay");
+const formModalOverlay = document.getElementById("formModalOverlay");
 const formModal = document.getElementById("formModal");
-const successModal = document.getElementById("successModal");
+const successModalOverlay = document.getElementById("successModalOverlay");
+const calculatorModalOverlay = document.getElementById(
+  "calculatorModalOverlay"
+);
+const calculatorModal = document.getElementById("calculatorModal");
+
 const applicationForm = document.getElementById("applicationForm");
-const okBtn = document.getElementById("okBtn");
+const nameInput = document.getElementById("name");
+const phoneInput = document.getElementById("phone");
+
+let moversCount = 0;
+const moversCountElement = document.getElementById("moversCount");
+
+formModalOverlay.style.display = "none";
+successModalOverlay.style.display = "none";
+calculatorModalOverlay.style.display = "none";
+
+document
+  .getElementById("openFormModalBtn")
+  .addEventListener("click", openFormModal);
+document
+  .getElementById("openFormModalBtn2")
+  .addEventListener("click", openFormModal);
+document
+  .getElementById("openModalBtn1")
+  .addEventListener("click", openCalculatorModal);
+
+document
+  .getElementById("closeFormModalBtn")
+  .addEventListener("click", closeAllModals);
+document
+  .getElementById("closeCalculatorModalBtn")
+  .addEventListener("click", closeAllModals);
+document.getElementById("okBtn").addEventListener("click", closeAllModals);
+
+document.getElementById("decreaseMovers").addEventListener("click", () => {
+  if (moversCount > 0) {
+    moversCount--;
+    moversCountElement.textContent = moversCount;
+  }
+});
+
+document.getElementById("increaseMovers").addEventListener("click", () => {
+  moversCount++;
+  moversCountElement.textContent = moversCount;
+});
+
+document.getElementById("submitCalculatorBtn").addEventListener("click", () => {
+  closeAllModals();
+  showSuccessModal();
+});
 
 function openFormModal() {
-  modalOverlay.classList.add("open");
-  formModal.classList.add("open");
-  successModal.classList.remove("open");
+  closeAllModals();
+  formModalOverlay.style.display = "flex";
   document.body.style.overflow = "hidden";
 }
 
-function closeModal() {
-  modalOverlay.classList.remove("open");
-  formModal.classList.remove("open");
-  successModal.classList.remove("open");
-  document.body.style.overflow = "auto";
+function openCalculatorModal() {
+  closeAllModals();
+  calculatorModalOverlay.style.display = "flex";
+  document.body.style.overflow = "hidden";
 }
 
 function showSuccessModal() {
-  formModal.classList.remove("open");
-  successModal.classList.add("open");
+  closeAllModals();
+  successModalOverlay.style.display = "flex";
+  document.body.style.overflow = "hidden";
+  document.getElementById("input1").value = "";
+  document.getElementById("input2").value = "";
+  document.getElementById("input3").value = "";
+  document.getElementById("input4").value = "";
+  document.getElementById("input5").value = "";
+  document.getElementById("input6").value = "";
 }
 
-openModalBtn.addEventListener("click", openFormModal);
-closeModalBtn.addEventListener("click", closeModal);
-okBtn.addEventListener("click", closeModal);
+function closeAllModals() {
+  formModalOverlay.style.display = "none";
+  successModalOverlay.style.display = "none";
+  calculatorModalOverlay.style.display = "none";
+  document.body.style.overflow = "auto";
+}
 
-modalOverlay.addEventListener("click", function (e) {
-  if (e.target === modalOverlay) {
-    closeModal();
+[formModalOverlay, successModalOverlay, calculatorModalOverlay].forEach(
+  (overlay) => {
+    overlay.addEventListener("click", function (e) {
+      if (e.target === overlay) {
+        closeAllModals();
+      }
+    });
   }
-});
+);
 
 applicationForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const name = document.getElementById("name").value;
-  const phone = document.getElementById("phone").value;
-  const message = document.getElementById("message").value;
+  const name = nameInput.value.trim();
+  const phone = phoneInput.value.trim();
 
-  if (!name.trim() || !phone.trim()) {
-    formModal.style.animation = "shake 0.5s ease-in-out";
+  nameInput.classList.remove("border-red-500", "bg-red-50");
+  phoneInput.classList.remove("border-red-500", "bg-red-50");
+
+  if (!name || !phone) {
+    formModal.classList.add("shake");
     setTimeout(() => {
-      formModal.style.animation = "";
+      formModal.classList.remove("shake");
     }, 500);
 
-    if (!name.trim()) {
-      document
-        .getElementById("name")
-        .classList.add("border-red-500", "bg-red-50");
+    if (!name) {
+      nameInput.classList.add("border-red-500", "bg-red-50");
     }
-    if (!phone.trim()) {
-      document
-        .getElementById("phone")
-        .classList.add("border-red-500", "bg-red-50");
+    if (!phone) {
+      phoneInput.classList.add("border-red-500", "bg-red-50");
     }
     return;
   }
 
-  document
-    .getElementById("name")
-    .classList.remove("border-red-500", "bg-red-50");
-  document
-    .getElementById("phone")
-    .classList.remove("border-red-500", "bg-red-50");
-
   showSuccessModal();
-
   applicationForm.reset();
 });
 
-document.getElementById("name").addEventListener("input", function () {
+nameInput.addEventListener("input", function () {
   this.classList.remove("border-red-500", "bg-red-50");
 });
 
-document.getElementById("phone").addEventListener("input", function () {
+phoneInput.addEventListener("input", function () {
   this.classList.remove("border-red-500", "bg-red-50");
 });
 
 document.addEventListener("keydown", function (e) {
   if (e.key === "Escape") {
-    closeModal();
+    closeAllModals();
   }
 });
-
-const style = document.createElement("style");
-style.textContent = `
-            @keyframes shake {
-                0%, 100% { transform: translateX(0) scale(1); }
-                10%, 30%, 50%, 70%, 90% { transform: translateX(-5px) scale(1); }
-                20%, 40%, 60%, 80% { transform: translateX(5px) scale(1); }
-            }
-        `;
-document.head.appendChild(style);
