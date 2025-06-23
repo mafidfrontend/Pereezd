@@ -258,7 +258,9 @@
                 class="absolute inset-0 z-40 flex items-center justify-center text-white px-4"
               >
                 <div class="max-w-4xl">
-                  <h1 class="text-2xl sm:text-3xl lg:text-5xl font-bold mb-6">
+                  <h1
+                    class="text-2xl text-center sm:text-3xl lg:text-5xl font-bold mb-6"
+                  >
                     Квартирный и офисный переезд в Ташкенте "под ключ"
                   </h1>
                   <p
@@ -267,127 +269,6 @@
                     Профессиональная упаковка и транспортировка офисной мебели и
                     оборудования
                   </p>
-                  <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button class="py-4 px-8 hover:bg-white" id="openModalBtn">
-                      Оставить заявку
-                    </button>
-                    <button class="py-4 px-8 hover:bg-white">
-                      Калькулятор
-                    </button>
-                  </div>
-                  <div
-                    id="modalOverlay"
-                    class="modal-overlay fixed inset-0 bg-black opacity-50 z-40 flex items-center justify-center p-4"
-                  >
-                    <div
-                      id="formModal"
-                      class="modal bg-white shadow-2xl w-[500px] modal-content"
-                    >
-                      <div class="p-6">
-                        <div
-                          class="flex mt-[-100px] justify-between items-center"
-                        >
-                          <h2 class="text-xl font-semibold text-green-600">
-                            Оставить заявку
-                          </h2>
-                          <p
-                            id="closeModalBtn"
-                            class="text-gray-400 cursor-pointer hover:text-gray-600 text-2xl w-8 h-8 mt-[60px] rounded-full hover:bg-gray-100 transition-colors"
-                          >
-                            ×
-                          </p>
-                        </div>
-
-                        <form id="applicationForm">
-                          <div class="mb-4">
-                            <label
-                              class="block text-gray-700 text-sm font-medium mb-2"
-                            >
-                              Введите имя<span class="text-red-500">*</span>
-                            </label>
-                            <input
-                              type="text"
-                              id="name"
-                              required
-                              class="w-full px-4 py-3 text-black bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
-                            />
-                          </div>
-
-                          <div class="mb-4">
-                            <label
-                              class="block text-gray-700 text-sm font-medium mb-2"
-                            >
-                              Номер телефона<span class="text-red-500">*</span>
-                            </label>
-                            <input
-                              type="tel"
-                              id="phone"
-                              placeholder="+998 97 217 75 56"
-                              required
-                              class="w-full px-4 py-3 text-black bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all placeholder-gray-400"
-                            />
-                          </div>
-
-                          <div class="mb-6">
-                            <label
-                              class="block text-gray-700 text-sm font-medium mb-2"
-                            >
-                              Сообщение
-                            </label>
-                            <textarea
-                              id="message"
-                              rows="4"
-                              class="w-full px-4 py-3 text-black bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all resize-none"
-                            ></textarea>
-                          </div>
-
-                          <button
-                            type="submit"
-                            class="w-full py-4 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors duration-200 font-medium text-lg shadow-lg hover:shadow-xl"
-                          >
-                            Отправить
-                          </button>
-                        </form>
-                      </div>
-                    </div>
-
-                    <div
-                      id="successModal"
-                      class="modal bg-white rounded-2xl shadow-2xl w-full max-w-md modal-content"
-                    >
-                      <div class="p-8 text-center">
-                        <div
-                          class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg"
-                        >
-                          <svg
-                            class="w-10 h-10 text-white"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="3"
-                              d="M5 13l4 4L19 7"
-                            ></path>
-                          </svg>
-                        </div>
-
-                        <h2 class="text-xl font-semibold text-gray-800 mb-2">
-                          Успешно оформлено!
-                        </h2>
-                        <p class="text-gray-500 mb-8">Оператор позвонит вам</p>
-
-                        <button
-                          id="okBtn"
-                          class="w-full py-4 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors duration-200 font-medium text-lg shadow-lg hover:shadow-xl"
-                        >
-                          Понятно
-                        </button>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -413,10 +294,6 @@
                     грузоперевозок. Они выполняют практически весь перечень
                     работ при переезде.
                   </p>
-                  <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button class="py-4 px-8">Оставить заявку</button>
-                    <button class="py-4 px-8">Калькулятор</button>
-                  </div>
                 </div>
               </div>
             </div>
@@ -441,10 +318,6 @@
                     Нужна качественная установка кондиционера в квартире, офисе
                     или коммерческом помещении?
                   </p>
-                  <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button class="py-4 px-8">Оставить заявку</button>
-                    <button class="py-4 px-8">Калькулятор</button>
-                  </div>
                 </div>
               </div>
             </div>
@@ -470,31 +343,27 @@
                     разборке и сборке мебели в Ташкенте: шкафов, кроватей,
                     кухонь, столов, стенок и любой другой корпусной мебели.
                   </p>
-                  <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button class="py-4 px-8">Оставить заявку</button>
-                    <button class="py-4 px-8">Калькулятор</button>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
 
           <div
-            class="absolute cursor-pointer left-4 top-1/2 transform -translate-y-1/2 z-50 p-3 rounded-full transition-all duration-200"
+            class="absolute cursor-pointer left-4 top-1/2 transform -translate-y-1/2 z-40 p-3 rounded-full transition-all duration-200"
             id="prevBtn"
           >
             <img src="./images/icons/prewious.svg" alt="" />
           </div>
 
           <div
-            class="absolute cursor-pointer right-4 top-1/2 transform -translate-y-1/2 z-50 p-3 rounded-full transition-all duration-200"
+            class="absolute cursor-pointer right-4 top-1/2 transform -translate-y-1/2 z-40 p-3 rounded-full transition-all duration-200"
             id="nextBtn"
           >
             <img src="./images/icons/next.svg" alt="" />
           </div>
 
           <div
-            class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-50 flex space-x-3"
+            class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-40 flex space-x-3"
             id="indicators"
           >
             <div
@@ -528,6 +397,345 @@
             </div>
             <div class="text-center px-4 py-2">
               <p>Многолетний опыт в области</p>
+            </div>
+          </div>
+          <div
+            class="absolute top-[550px] left-[760px] z-50 hidden lg:flex items-center"
+          >
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <button class="py-4 px-8 hover:bg-white" id="openModalBtn">
+                Оставить заявку
+              </button>
+              <button id="openModalBtn1" class="py-4 px-8 hover:bg-white">
+                Калькулятор
+              </button>
+            </div>
+            <div
+              id="modalOverlay"
+              class="modal-overlay fixed inset-0 bg-gray-400 opacity-5 z-50 flex items-center justify-center p-4"
+            >
+              <div
+                id="formModal"
+                class="modal bg-white shadow-2xl w-[500px] modal-content relative left-52"
+              >
+                <div class="p-6">
+                  <div class="flex justify-between items-center pt-[-300px]">
+                    <h2 class="text-[20px] font-semibold  text-green-600 leading-4">
+                      Оставить заявку
+                    </h2>
+                    <p
+                      id="closeModalBtn"
+                      class="text-gray-400 cursor-pointer hover:text-gray-600 text-2xl w-8 h-8 rounded-full hover:bg-gray-100 transition-colors"
+                    >
+                      ×
+                    </p>
+                  </div>
+
+                  <form id="applicationForm">
+                    <div class="mb-4">
+                      <label
+                        class="block text-gray-700 text-sm font-medium mb-2"
+                      >
+                        Введите имя<span class="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        value="ab"
+                        required
+                        class="w-full px-4 py-3 text-black bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                      />
+                    </div>
+
+                    <div class="mb-4">
+                      <label
+                        class="block text-gray-700 text-sm font-medium mb-2"
+                      >
+                        Номер телефона<span class="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="tel"
+                        value="ab"
+                        id="phone"
+                        placeholder="+998 97 217 75 56"
+                        required
+                        class="w-full px-4 py-3 text-black bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all placeholder-gray-400"
+                      />
+                    </div>
+
+                    <div class="mb-6">
+                      <label
+                        class="block text-gray-700 text-sm font-medium mb-2"
+                      >
+                        Сообщение
+                      </label>
+                      <textarea
+                        id="message"
+                        rows="4"
+                        class="w-full px-4 py-3 text-black bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all resize-none"
+                      ></textarea>
+                    </div>
+
+                    <button
+                      type="submit"
+                      class="w-full py-4 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors duration-200 font-medium text-lg shadow-lg hover:shadow-xl"
+                    >
+                      Отправить
+                    </button>
+                  </form>
+                </div>
+              </div>
+
+              <div
+                id="successModal"
+                class="modal bg-white shadow-2xl w-[417px] modal-content relative left-[-260px]"
+              >
+                <div class="p-8 text-center">
+                  <div
+                    class="w-[71px] h-[71px] bg-green-500 rounded-full flex items-center justify-center mx-auto shadow-lg"
+                  >
+                    <svg
+                      class="w-10 h-10 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="3"
+                        d="M5 13l4 4L19 7"
+                      ></path>
+                    </svg>
+                  </div>
+
+                  <h2 class="text-xl mt-3 font-semibold text-gray-800">
+                    Успешно оформлено!
+                  </h2>
+                  <p class="text-gray-500 mt-[-70px] mb-8">
+                    Оператор позвонит вам
+                  </p>
+
+                  <button
+                    id="okBtn"
+                    class="w-full py-4 bg-green-500 text-white hover:bg-green-600 transition-colors duration-200 font-medium text-lg shadow-lg hover:shadow-xl"
+                  >
+                    Понятно
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              id="modalBackdrop"
+              class="fixed inset-0 bg-gray-400 opacity-5 z-40 hidden transition-opacity duration-300"
+            ></div>
+            <div
+              id="calculatorModal"
+              class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden"
+            >
+              <div
+                class="bg-white rounded-lg shadow-xl max-w-md w-full max-h-[90vh] overflow-y-auto transform scale-95 transition-transform duration-300"
+              >
+                <div
+                  class="flex justify-between items-center p-6 border-b border-gray-200"
+                >
+                  <h1 class="text-2xl font-medium text-green-600">
+                    Калькулятор
+                  </h1>
+                  <button
+                    id="closeModalBtn1"
+                    class="text-gray-400 hover:text-gray-600 transition-colors"
+                  >
+                    <svg
+                      class="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="p-6">
+                  <div class="mb-4">
+                    <label class="block text-sm text-gray-500 mb-2"
+                      >Адрес погрузки</label
+                    >
+                    <div class="relative">
+                      <input
+                        type="text"
+                        id="pickupAddress"
+                        class="w-full p-3 bg-gray-100 rounded-lg border-0 focus:ring-2 focus:ring-green-500 focus:bg-white transition-colors"
+                        placeholder="Введите адрес погрузки"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-sm text-gray-500 mb-2"
+                      >Адрес выгрузки</label
+                    >
+                    <div class="relative">
+                      <input
+                        type="text"
+                        id="deliveryAddress"
+                        class="w-full p-3 bg-gray-100 rounded-lg border-0 focus:ring-2 focus:ring-green-500 focus:bg-white transition-colors"
+                        placeholder="Введите адрес выгрузки"
+                      />
+                      <svg
+                        class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-2 gap-4 mb-4">
+                    <div>
+                      <label class="block text-sm text-gray-500 mb-2"
+                        >Выбрать машину</label
+                      >
+                      <select
+                        id="carSelect"
+                        class="w-full p-3 bg-gray-100 rounded-lg border-0 focus:ring-2 focus:ring-green-500 focus:bg-white appearance-none"
+                      >
+                        <option value="">Выберите</option>
+                        <option value="labo">Лабо</option>
+                        <option value="porter">Портер</option>
+                        <option value="truck">Грузовик</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label class="block text-sm text-gray-500 mb-2"
+                        >Когда</label
+                      >
+                      <input
+                        type="date"
+                        id="dateSelect"
+                        class="w-full p-3 bg-gray-100 rounded-lg border-0 focus:ring-2 focus:ring-green-500 focus:bg-white"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-2 gap-4 mb-4">
+                    <div>
+                      <label class="block text-sm text-gray-500 mb-2"
+                        >Грузчики</label
+                      >
+                      <div class="flex items-center bg-gray-100 rounded-lg">
+                        <button
+                          type="button"
+                          id="decreaseMovers"
+                          class="p-3 text-gray-600 hover:text-gray-800 transition-colors"
+                        >
+                          <svg
+                            class="w-4 h-4"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M20 12H4"
+                            ></path>
+                          </svg>
+                        </button>
+                        <span
+                          id="moversCount"
+                          class="flex-1 text-center py-3 font-medium"
+                          >0</span
+                        >
+                        <button
+                          type="button"
+                          id="increaseMovers"
+                          class="p-3 text-gray-600 hover:text-gray-800 transition-colors"
+                        >
+                          <svg
+                            class="w-4 h-4"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M12 4v16m8-8H4"
+                            ></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div>
+                      <label class="block text-sm text-gray-500 mb-2"
+                        >Номер телефона</label
+                      >
+                      <input
+                        type="tel"
+                        id="phoneNumber"
+                        class="w-full p-3 bg-gray-100 rounded-lg border-0 focus:ring-2 focus:ring-green-500 focus:bg-white"
+                        placeholder="+998"
+                        value="+998"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="mb-6">
+                    <label class="block text-sm text-gray-500 mb-2"
+                      >Комментарий к заказу (необязательно)</label
+                    >
+                    <textarea
+                      id="comment"
+                      rows="4"
+                      class="w-full p-3 bg-gray-100 rounded-lg border-0 focus:ring-2 focus:ring-green-500 focus:bg-white resize-none"
+                      placeholder="Дополнительная информация..."
+                    ></textarea>
+                  </div>
+
+                  <div
+                    id="warningText"
+                    class="text-xs text-gray-500 mb-4 hidden"
+                  >
+                    Для оформления заказа, укажите
+                    <span
+                      class="text-green-600 underline cursor-pointer"
+                      onclick="focusPhone()"
+                      >номер телефона</span
+                    >
+                    и заполните
+                    <span
+                      class="text-green-600 underline cursor-pointer"
+                      onclick="focusPickup()"
+                      >Адрес погрузки</span
+                    >
+                  </div>
+
+                  <button
+                    type="button"
+                    id="submitButton"
+                    class="w-full py-4 rounded-lg font-medium text-white transition-all duration-300 bg-gray-400 cursor-not-allowed"
+                    disabled
+                  >
+                    Оформить
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1390,6 +1598,7 @@
 
     <!-- JavaScript Link -->
     <script src="./src/app.js"></script>
+    <script src="./src/calc.js"></script>
     <script src="./src/footer.js"></script>
   </body>
 </html>
