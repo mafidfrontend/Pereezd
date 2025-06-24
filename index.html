@@ -422,7 +422,9 @@
               >
                 <div class="p-6">
                   <div class="flex justify-between items-center mb-6">
-                    <h2 class="text-xl mt-5 mb-[-50px] font-semibold text-green-600">
+                    <h2
+                      class="text-xl mt-5 mb-[-50px] font-semibold text-green-600"
+                    >
                       Задать вопрос
                     </h2>
                     <button
@@ -566,28 +568,30 @@
                 </div>
 
                 <div class="p-6">
-                  <div class="mb-4">
-                    <label class="block text-sm text-gray-500 mb-2"
-                      >Адрес погрузки</label
-                    >
-                    <input
-                      type="text"
-                      id="pickupAddress"
-                      class="w-full p-3 bg-gray-100 rounded-lg border-0 focus:ring-2 focus:ring-green-500 focus:bg-white transition-colors"
-                      placeholder="Введите адрес погрузки"
-                    />
-                  </div>
+                  <div class="flex justify-between">
+                    <div class="mb-4">
+                      <label class="block text-sm text-gray-500 mb-2"
+                        >Адрес погрузки</label
+                      >
+                      <input
+                        type="text"
+                        id="pickupAddress"
+                        class="w-full p-3 bg-gray-100 rounded-lg border-0 focus:ring-2 focus:ring-green-500 focus:bg-white transition-colors"
+                        placeholder="Введите адрес погрузки"
+                      />
+                    </div>
 
-                  <div class="mb-4">
-                    <label class="block text-sm text-gray-500 mb-2"
-                      >Адрес выгрузки</label
-                    >
-                    <input
-                      type="text"
-                      id="deliveryAddress"
-                      class="w-full p-3 bg-gray-100 rounded-lg border-0 focus:ring-2 focus:ring-green-500 focus:bg-white transition-colors"
-                      placeholder="Введите адрес выгрузки"
-                    />
+                    <div class="mb-4">
+                      <label class="block text-sm text-gray-500 mb-2"
+                        >Адрес выгрузки</label
+                      >
+                      <input
+                        type="text"
+                        id="deliveryAddress"
+                        class="w-full p-3 bg-gray-100 rounded-lg border-0 focus:ring-2 focus:ring-green-500 focus:bg-white transition-colors"
+                        placeholder="Введите адрес выгрузки"
+                      />
+                    </div>
                   </div>
 
                   <div class="grid grid-cols-2 gap-4 mb-4">
@@ -623,6 +627,11 @@
                         >Грузчики</label
                       >
                       <div class="flex items-center bg-gray-100 rounded-lg">
+                        <span
+                          id="moversCount"
+                          class="flex-1 text-center py-3 font-medium"
+                          >0</span
+                        >
                         <button
                           type="button"
                           id="decreaseMovers"
@@ -642,11 +651,7 @@
                             ></path>
                           </svg>
                         </button>
-                        <span
-                          id="moversCount"
-                          class="flex-1 text-center py-3 font-medium"
-                          >0</span
-                        >
+
                         <button
                           type="button"
                           id="increaseMovers"
@@ -875,12 +880,18 @@
               Квартирный переезд в Ташкенте
             </h3>
             <div class="flex-1 flex items-center justify-center">
-              <img
-                id="image-1"
-                src="./images/photos/payment-photoroom.png"
-                alt="Квартирный переезд"
-                class="max-w-full h-auto object-contain absolute bottom-0 right-0 hover-transition opacity-100"
-              />
+              <div class="image-wrapper">
+                <img
+                  class="default-image"
+                  src="./images/photos/payment-photoroom.png"
+                  alt="Default Image"
+                />
+                <img
+                  class="hover-image"
+                  src="./images/photos/payment-office.png"
+                  alt="Hover Image"
+                />
+              </div>
             </div>
           </div>
 
@@ -889,12 +900,18 @@
             class="bg-[#F3F3F3] col-span-1 sm:col-span-2 lg:col-span-2 rounded-lg p-[30px] flex flex-col relative h-[300px] cursor-pointer transition-all duration-300"
           >
             <div class="flex-1 flex items-center justify-center mb-4">
-              <img
-                id="image-2"
-                src="./images/photos/payment-office.png"
-                alt="Офисный переезд"
-                class="max-w-full h-auto object-contain absolute top-0 left-0 hover-transition opacity-100"
-              />
+              <div class="image-wrapper">
+                <img
+                  class="default-image"
+                  src="./images/photos/payment-office.png"
+                  alt="Hover Image"
+                />
+                <img
+                  class="hover-image"
+                  src="./images/photos/payment-photoroom.png"
+                  alt="Default Image"
+                />
+              </div>
             </div>
             <h3
               class="text-lg sm:text-xl lg:text-[20px] text-right font-semibold text-[#202020] w-full sm:w-52 mb-[30px] mr-0 sm:mr-[30px] ml-auto"
@@ -907,13 +924,9 @@
             class="bg-[#F3F3F3] col-span-1 sm:col-span-2 lg:col-span-4 rounded-lg p-[30px] flex flex-col relative h-[300px]"
           >
             <div
-              class="flex-1 flex items-center justify-center lg:justify-start mb-4"
+              class="flex-1 flex items-center justify-center lg:justify-start cursor-pointer -mt-8"
             >
-              <img
-                src="./images/photos/payment-man.png"
-                alt="Услуги грузчиков"
-                class="max-w-full h-auto object-contain absolute top-0 left-4 sm:left-[51px]"
-              />
+              <img src="./images/photos/payment-man.png" alt="Hover Image" />
             </div>
             <h3
               class="text-lg sm:text-xl lg:text-[20px] font-semibold text-[#202020] w-full sm:w-[250px] mb-4 text-right lg:text-right absolute top-[30px] right-[30px]"
@@ -976,11 +989,18 @@
               Разборка-сборка мебели
             </h3>
             <div class="flex-1 flex items-center justify-center">
-              <img
-                src="./images/photos/payment-mebel.png"
-                alt="Разборка-сборка мебели"
-                class="max-w-full h-auto object-contain absolute"
-              />
+              <div class="image-wrapper image-wrapper2">
+                <img
+                  class="default-image"
+                  src="./images/photos/payment-mebel.png"
+                  alt="Hover Image"
+                />
+                <img
+                  class="hover-image"
+                  src="./images/photos/payment-conditioner.png"
+                  alt="Default Image"
+                />
+              </div>
             </div>
           </div>
 
@@ -988,11 +1008,18 @@
             class="bg-[#F3F3F3] rounded-lg p-[30px] col-span-1 sm:col-span-1 lg:col-span-2 flex flex-col relative h-[300px]"
           >
             <div class="flex-1 flex items-center justify-center">
-              <img
-                src="./images/photos/payment-conditioner.png"
-                alt="Монтаж кондиционера"
-                class="max-w-full h-auto object-contain absolute"
-              />
+              <div class="image-wrapper image-wrapper3">
+                <img
+                  class="default-image"
+                  src="./images/photos/payment-conditioner.png"
+                  alt="Default Image"
+                />
+                <img
+                  class="hover-image"  
+                  src="./images/photos/payment-mebel.png"
+                  alt="Hover Image"
+                />
+              </div>
             </div>
             <h3
               class="text-lg sm:text-xl lg:text-[20px] font-semibold text-[#202020] w-full sm:w-[250px] mb-4"
@@ -1004,41 +1031,41 @@
       </section>
 
       <section
-        class="bg-[#52AE32] h-auto lg:h-[400px] w-full relative py-8 lg:py-0"
+        class="bg-[#52AE32] h-300 w-full relative py-8 lg:h-[400px] lg:py-0"
       >
         <h3
-          class="text-center text-[#FFFFFF] text-2xl sm:text-3xl lg:text-[32px] font-semibold w-full sm:w-[517px] mx-auto pt-8 lg:pt-[60px] px-4"
+          class="mx-auto w-full px-4 pt-8 text-center text-2xl font-semibold text-[#FFFFFF] sm:w-[517px] sm:text-3xl lg:pt-[60px] lg:text-[32px]"
         >
           Сотрудничество с компанией «Eastline Pereezd»:
         </h3>
         <div
-          class="absolute top-auto lg:top-[198px] left-0 right-0 mt-8 lg:mt-0"
+          class="relative mt-8 lg:absolute lg:left-0 lg:right-0 lg:mt-0 lg:top-[198px]"
         >
           <div
-            class="flex flex-col lg:flex-row mx-auto justify-center gap-6 lg:gap-0 px-4"
+            class="mx-auto flex flex-col justify-center gap-6 px-4 lg:flex-row lg:gap-0"
           >
             <div
-              class="bg-white w-full lg:w-[372px] shadow-2xl h-auto lg:h-[396px] rounded-lg lg:rounded-none p-6 lg:p-0"
+              class="h-auto w-full rounded-lg bg-white p-6 shadow-2xl lg:h-[396px] lg:w-[372px] lg:rounded-none lg:p-0"
             >
               <div class="pt-[30px]">
                 <h3
-                  class="font-semibold text-xl sm:text-2xl lg:text-[24px] text-center"
+                  class="text-center text-xl font-semibold sm:text-2xl lg:text-[24px]"
                 >
                   Удобство
                 </h3>
                 <p
-                  class="text-[#808080] mr-0 lg:mr-[48px] mt-[30px] ml-0 lg:ml-[30px] text-sm sm:text-base"
+                  class="ml-0 mt-[30px] text-sm text-[#808080] sm:text-base lg:ml-[30px] lg:mr-[48px]"
                 >
                   – Оказываем целый спектр услуг - как отдельно, так и в
                   комплексе (переезд под ключ)
                 </p>
                 <p
-                  class="text-[#808080] mr-0 lg:mr-[48px] mt-[30px] ml-0 lg:ml-[30px] text-sm sm:text-base"
+                  class="ml-0 mt-[30px] text-sm text-[#808080] sm:text-base lg:ml-[30px] lg:mr-[48px]"
                 >
                   – Работаем ежедневно, без выходных
                 </p>
                 <p
-                  class="text-[#808080] mr-0 lg:mr-[48px] mt-[30px] ml-0 lg:ml-[30px] text-sm sm:text-base"
+                  class="ml-0 mt-[30px] text-sm text-[#808080] sm:text-base lg:ml-[30px] lg:mr-[48px]"
                 >
                   – Выезд менеджера, доставка упаковочных материалов, начало
                   переезда - в удобное для вас время
@@ -1046,21 +1073,21 @@
               </div>
             </div>
             <div
-              class="bg-white w-full lg:w-[372px] shadow-2xl lg:mx-[115px] h-auto lg:h-[396px] rounded-lg lg:rounded-none p-6 lg:p-0"
+              class="h-auto w-full rounded-lg bg-white p-6 shadow-2xl lg:mx-[115px] lg:h-[396px] lg:w-[372px] lg:rounded-none lg:p-0"
             >
               <div class="pt-[30px]">
                 <h3
-                  class="font-semibold text-xl sm:text-2xl lg:text-[24px] text-center"
+                  class="text-center text-xl font-semibold sm:text-2xl lg:text-[24px]"
                 >
                   Открытость
                 </h3>
                 <p
-                  class="text-[#808080] mr-0 lg:mr-[48px] mt-[30px] ml-0 lg:ml-[30px] text-sm sm:text-base"
+                  class="ml-0 mt-[30px] text-sm text-[#808080] sm:text-base lg:ml-[30px] lg:mr-[48px]"
                 >
                   – Прозрачное ценообразование, отсутствие скрытых доплат
                 </p>
                 <p
-                  class="text-[#808080] mr-0 lg:mr-[48px] mt-[30px] ml-0 lg:ml-[30px] text-sm sm:text-base"
+                  class="ml-0 mt-[30px] text-sm text-[#808080] sm:text-base lg:ml-[30px] lg:mr-[48px]"
                 >
                   – Обязательность заключения договора на оказание услуг по
                   переезду
@@ -1068,27 +1095,27 @@
               </div>
             </div>
             <div
-              class="bg-white w-full lg:w-[372px] shadow-2xl h-auto lg:h-[396px] rounded-lg lg:rounded-none p-6 lg:p-0"
+              class="h-auto w-full rounded-lg bg-white p-6 shadow-2xl lg:h-[396px] lg:w-[372px] lg:rounded-none lg:p-0"
             >
               <div class="pt-[30px]">
                 <h3
-                  class="font-semibold text-xl sm:text-2xl lg:text-[24px] text-center"
+                  class="text-center text-xl font-semibold sm:text-2xl lg:text-[24px]"
                 >
                   Уверенность в <br />
                   результате
                 </h3>
                 <p
-                  class="text-[#808080] mr-0 lg:mr-[48px] mt-[30px] ml-0 lg:ml-[30px] text-sm sm:text-base"
+                  class="ml-0 mt-[30px] text-sm text-[#808080] sm:text-base lg:ml-[30px] lg:mr-[48px]"
                 >
                   – Только квалифицированные сотрудники
                 </p>
                 <p
-                  class="text-[#808080] mr-0 lg:mr-[48px] mt-[30px] ml-0 lg:ml-[30px] text-sm sm:text-base"
+                  class="ml-0 mt-[30px] text-sm text-[#808080] sm:text-base lg:ml-[30px] lg:mr-[48px]"
                 >
                   – Осуществляем упаковку имущества для обеспечения сохранности
                 </p>
                 <p
-                  class="text-[#808080] mr-0 lg:mr-[48px] mt-[30px] ml-0 lg:ml-[30px] text-sm sm:text-base"
+                  class="ml-0 mt-[30px] text-sm text-[#808080] sm:text-base lg:ml-[30px] lg:mr-[48px]"
                 >
                   – Защищаем отделку помещений
                 </p>
@@ -1096,7 +1123,7 @@
             </div>
           </div>
           <button
-            class="py-[15px] px-[26px] flex mx-auto mt-10 mb-8 lg:mb-[120px]"
+            class="mx-auto mb-8 mt-10 flex px-[26px] py-[15px] lg:mb-[120px]"
           >
             Заказать услугу
           </button>
@@ -1286,27 +1313,21 @@
         <div
           class="flex flex-col lg:flex-row flex-wrap justify-center items-center gap-6 lg:gap-[122px] relative"
         >
-          <div
-            class="w-full sm:w-[366px] h-[300] sm:h-[650px] bg-[#D9D9D9] rounded-lg relative"
-          >
+          <div class="w-[360px] h-[651px] bg-[#D9D9D9] rounded-lg relative">
             <img
               class="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2"
               src="./images/icons/youtube.svg"
               alt="YouTube Icon"
             />
           </div>
-          <div
-            class="w-full sm:w-[366px] h-[300] sm:h-[650px] bg-[#D9D9D9] rounded-lg relative"
-          >
+          <div class="w-[360px] h-[651px] bg-[#D9D9D9] rounded-lg relative">
             <img
               class="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2"
               src="./images/icons/youtube.svg"
               alt="YouTube Icon"
             />
           </div>
-          <div
-            class="w-full sm:w-[366px] h-[300] sm:h-[650px] bg-[#D9D9D9] rounded-lg relative"
-          >
+          <div class="w-[360px] h-[651px] bg-[#D9D9D9] rounded-lg relative">
             <img
               class="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2"
               src="./images/icons/youtube.svg"
@@ -1346,7 +1367,12 @@
             id="input2"
             placeholder="Введите телефон*"
           />
-          <button class="py-5 px-[47px] rounded-md" onclick="showSuccessModal()">Оставить заявку</button>
+          <button
+            class="py-5 px-[47px] rounded-md"
+            onclick="showSuccessModal()"
+          >
+            Оставить заявку
+          </button>
         </form>
       </section>
 
@@ -1566,7 +1592,10 @@
               id="input6"
               class="bg-[#F3F3F3] py-5 px-5 w-full h-[192px] rounded-md resize-vertical"
             ></textarea>
-            <button onclick="showSuccessModal()" class="py-5 px-[47px] mt-[30px] rounded-md">
+            <button
+              onclick="showSuccessModal()"
+              class="py-5 px-[47px] mt-[30px] rounded-md"
+            >
               Оставить заявку
             </button>
           </form>
