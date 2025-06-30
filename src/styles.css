@@ -260,3 +260,7 @@ a:hover {
   width: 265px;
   height: 160px;
 }
+
+section {
+  padding-top: 60px;
+}
